@@ -30,7 +30,20 @@
         <!-- 主显示区 -->
         <a-layout-content class="contentBox"> <router-view /> </a-layout-content>
         <!-- 底部 -->
-        <a-layout-footer style="text-align: center"> 沪ICP备2022024506号-1 </a-layout-footer>
+        <a-layout-footer style="text-align: center">
+          <a
+            target="_blank"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31012002005640"
+            style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px; margin-right: 10px"
+            ><img src="@/assets/filingIcon.png" style="float: left" />
+            <p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393">沪公网安备 31012002005640号</p></a
+          >
+
+          <a style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px"
+            ><img src="" style="float: left" />
+            <p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393">沪ICP备2022024506号-1</p></a
+          >
+        </a-layout-footer>
       </a-layout>
     </a-layout>
   </a-layout>
@@ -86,6 +99,24 @@ watch(route, (newValue) => {
   padding: 24px;
   margin: 16px 0;
   min-height: 280px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #535353;
+  }
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #ededed;
+  }
 }
 </style>
 <style lang="less">
@@ -98,5 +129,9 @@ watch(route, (newValue) => {
 }
 .ant-layout-footer {
   padding: 0;
+}
+
+.hand {
+  cursor: pointer;
 }
 </style>
