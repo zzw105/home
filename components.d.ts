@@ -21,5 +21,6 @@ declare module '@vue/runtime-core' {
     ASubMenu: typeof import('ant-design-vue/es')['SubMenu']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UniversalPageComponents: typeof import('./src/components/UniversalPageComponents.vue')['default']
   }
 }

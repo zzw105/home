@@ -1,9 +1,13 @@
 import * as VueRouter from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
 import AccountBookPage from '@/pages/AccountBookPage.vue'
-const routes = [
+import MiniPicture from '@/pages/MiniPicture.vue'
+import { RouteRecordRaw } from 'vue-router'
+
+export const routes: RouteRecordRaw[] = [
   { path: '/', component: HomePage, name: 'HomePage' },
-  { path: '/accountBook', component: AccountBookPage, name: 'AccountBookPage' }
+  { path: '/accountBook', component: AccountBookPage, name: 'AccountBookPage' },
+  { path: '/miniPicture', component: MiniPicture, name: 'MiniPicture' }
 ]
 
 const router = VueRouter.createRouter({

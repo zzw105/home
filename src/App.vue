@@ -23,12 +23,13 @@
               </span>
             </template>
             <a-menu-item key="21" @click="routerPush('AccountBookPage')">账本</a-menu-item>
+            <a-menu-item key="22" @click="routerPush('MiniPicture')">小表情生成器</a-menu-item>
           </a-sub-menu>
         </a-menu>
       </a-layout-sider>
       <a-layout style="padding: 24px 24px 16px 24px">
         <!-- 主显示区 -->
-        <a-layout-content class="contentBox"> <router-view /> </a-layout-content>
+        <a-layout-content class="contentBox"> <router-view class="contentPadding" /> </a-layout-content>
         <!-- 底部 -->
         <a-layout-footer style="text-align: center">
           <a
@@ -72,6 +73,9 @@ watch(route, (newValue) => {
     case 'AccountBookPage':
       key = '21'
       break
+    case 'MiniPicture':
+      key = '22'
+      break
     default:
       break
   }
@@ -96,7 +100,6 @@ watch(route, (newValue) => {
 }
 .contentBox {
   background: #fff;
-  padding: 24px;
   margin: 16px 0;
   min-height: 280px;
   overflow-y: scroll;
@@ -118,20 +121,7 @@ watch(route, (newValue) => {
     background: #ededed;
   }
 }
-</style>
-<style lang="less">
-#app,
-.mainBox {
-  height: 100%;
-}
-.ant-layout-header {
-  background: rgb(166, 166, 166);
-}
-.ant-layout-footer {
-  padding: 0;
-}
-
-.hand {
-  cursor: pointer;
+.contentPadding {
+  padding: 24px;
 }
 </style>
